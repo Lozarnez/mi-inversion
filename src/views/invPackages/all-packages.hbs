@@ -28,6 +28,9 @@
               <a href="/packages/efficiency" class="btn btn-primary btn-block mt-3 mb-2">Rendimiento</a>
             </div>
           </div>
+          {{#if initial}}
+          <div class="row"></div>
+          {{else}}
           <div class="row">
             <div class="col d-flex justify-content-center">
               <form action="/packages/delete/{{_id}}?_method=DELETE" method="POST">
@@ -36,6 +39,7 @@
               </form>
             </div>
           </div>
+          {{/if}}
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/mi-inversion', {
+mongoose.connect('mongodb+srv://Admin1:4dm1n1@miinv-jroan.mongodb.net/test?retryWrites=true&w=majority', {
   useCreateIndex: true,
   useNewUrlParser: true,
   useFindAndModify: false
