@@ -1,0 +1,51 @@
+<div class="row">
+  {{#each packages}}
+    <div class="col-md-3">
+      <div class="card shadow">
+        <div class="card-body">
+          <h4 class="card-title mb-4 d-flex justify-content-between align-items-center">
+            {{packageName}}
+            <a href="/packages/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+          </h4>
+          <div class="row d-flex justify-content-between align-items-center">
+            <strong>Inversión mínima</strong>
+            <p>${{minInvestment}}</p>
+          </div>
+          <div class="row d-flex justify-content-between align-items-center">
+            <strong>Inversión máxima</strong>
+            <p>${{maxInvestment}}</p>
+          </div>
+          <div class="row d-flex justify-content-between align-items-center">
+            <strong>Tasa mensual</strong>
+            <p>{{increment}}%</p>
+          </div>
+          <div class="row d-flex justify-content-between align-items-center">
+            <strong>Duración</strong>
+            <p>{{period}} meses</p>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col">
+              <a href="/packages/efficiency" class="btn btn-primary btn-block mt-3 mb-2">Rendimiento</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <form action="/packages/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="btn btn-outline-danger btn-sm" type="submit">Borrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{else}}
+      <div class="card mx-auto">
+        <div class="card-body">
+          <h1>Bienvenido {{user.name}}</h1>
+          <p class="lead">No se han creado paquetes</p>
+          <a href="/packages/new" class="btn btn-success btn-block">Crea uno</a>
+        </div>
+      </div>
+  {{/each}}
+</div>

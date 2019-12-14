@@ -1,0 +1,36 @@
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h3>Edición de paquete</h3>
+    </div>
+    <div class="card-body">
+      <form action="/packages/edit-package/{{package.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <input type="text" name="packageName" class="form-control" placeholder="Título" value="{{package.packageName}}">
+        </div>
+        <div class="form-group">
+          <label for="minInv">Inversión mínima</label>
+          <input type="number" name="minInvestment" class="form-control" id="minInv" value="{{package.minInvestment}}">
+        </div>
+        <div class="form-group">
+          <label for="maxInv">Inversión máxima</label>
+          <input type="number" name="maxInvestment" class="form-control" id="maxInv" value="{{package.maxInvestment}}">
+        </div>
+        <div class="form-group">
+          <label for="increment">Tasa mensual (%)</label>
+          <input type="number" step="any" name="increment" class="form-control" id="increment" value="{{package.increment}}">
+        </div>
+        <div class="form-group">
+          <label for="period">Duración del plan (meses)</label>
+          <input type="number" name="period" class="form-control" id="period" value="{{package.period}}">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
