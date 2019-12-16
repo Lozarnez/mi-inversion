@@ -1,0 +1,39 @@
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col col-lg-6 mb-4">
+    <h1>Ingresa el monto a invertir</h1>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="row justify-content-center">
+          <h3>{{package.packageName}}</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <strong>Tasa de rendimiento</strong>
+        </div>
+        <div class="row justify-content-center">
+          <p>{{package.increment}}%</p>
+        </div>
+        <div class="row justify-content-center">
+          <strong>Duración del plan</strong>
+        </div>
+        <div class="row justify-content-center">
+          <p>{{package.period}} meses</p>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="number" class="form-control" step="any" name="investment" min="{{package.minInvestment}}" max="{{package.maxInvestment}}">
+          <button class="btn btn-primary btn-block mt-3">Generar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

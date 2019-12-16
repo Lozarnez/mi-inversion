@@ -6,6 +6,7 @@ const PackageSchema = new Schema({
   packageName: { type: String, unique: true, required: true },
   minInvestment: { type: Number, required: true },
   maxInvestment: { type: Number, required: true },
+  investment: { type: Number },
   increment: { type: Number, required: true },
   period: { type: Number, required: true },
   user: { type: String }
